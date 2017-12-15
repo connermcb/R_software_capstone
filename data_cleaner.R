@@ -30,6 +30,8 @@ quakes$LOCATION_NAME <- gsub("^.*:  ", "", quakes$LOCATION_NAME)
 quakes$LONGITUDE <- as.numeric(quakes$LONGITUDE)
 quakes$LATITUDE <- as.numeric(quakes$LATITUDE)
 
-
+# write data to file
+p <- file_path_as_absolute(".")
+write_csv(quakes, paste0(p, "/clean_quakes.csv"))
 
 
